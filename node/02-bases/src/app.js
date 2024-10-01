@@ -5,12 +5,21 @@
 // const { getUserById } = require('./js-foundation/04-arrow');
 // require('./js-foundation/05-factory');
 
-const getPokemonById = require('./js-foundation/06-promises');
+// ! Pertenece a la sección 3: Desarrollando en Node
+// const getPokemonById = require('./js-foundation/06-promises');
 
-getPokemonById(1)
-.then((pokemon) => console.log({pokemon}))
-.catch((error) => console.error('Por favor intende de nuevo'))
-.finally(() => console.log('Finalmente'));
+// getPokemonById(1)
+// .then((pokemon) => console.log({pokemon}))
+// .catch((error) => console.error('Por favor intende de nuevo'))
+// .finally(() => console.log('Finalmente'));
+
+const { buildLogger } = require('./plugins');
+
+const logger = buildLogger('app.js');
+
+logger.log('Hello from app.js');
+logger.error('Esto es algo malo');
+
 
 // ! Referencia a la función factory y uso
 // const { getUUID, getAge } = require('./plugins');
